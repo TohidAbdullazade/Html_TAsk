@@ -1,0 +1,460 @@
+:root {
+    --purple-red: #e9204f;
+    --slate-50: #F3F3F3;
+    --black: #000;
+    --white: #fff;
+}
+
+@font-face {
+    font-family: AvantGard-Bold;
+    src: url(/src/fonts/AVGARDD_2.TTF);
+}
+
+.avantgard-bold {
+    font-family: AvantGard-Bold;
+}
+
+@font-face {
+    font-family: AvantGard-Thin;
+    src: url(/src/fonts/AVGARDN_2.TTF);
+}
+
+.avantgard-thin {
+    font-family: AvantGard-Thin;
+}
+
+/* note:Fonts */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* note:Reset-Css */
+
+/*note: Header-Layout-Begin */
+header {
+    height: 100%;
+    max-height: auto;
+    background-color: #000;
+
+
+}
+
+.header-main {
+
+    height: 100%;
+}
+
+.header-main .header-wrapper nav {
+    margin: 0 6.25rem;
+}
+
+.header-wrapper {
+    max-height: 10.625rem;
+
+}
+
+.header-content {
+    max-height: calc(70.634rem - 10.625rem);
+    margin: 0 6.25rem;
+}
+
+.header-content .content-top h2::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    border-top: 3px solid var(--purple-red);
+    width: 70px;
+
+}
+
+header .header-wrapper .navbar-menu-container .nav-links-side .nav-menus li a {
+    position: relative;
+    font-weight: bolder;
+}
+
+header .header-wrapper .navbar-menu-container .nav-links-side .nav-menus li #home {
+    position: relative;
+}
+
+header .header-wrapper .navbar-menu-container .nav-links-side .nav-menus li #home::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-top: 2px solid var(--purple-red);
+    width: 20px;
+}
+
+header .header-wrapper .navbar-menu-container .nav-links-side .nav-menus li a:not(#home):after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-top: 2px solid var(--purple-red);
+    width: 0px;
+    transition: width .3s ease-in-out;
+
+}
+
+
+header .header-wrapper .navbar-menu-container .nav-links-side .nav-menus li a:not(#home):hover::after {
+    width: 20px;
+}
+
+header .header-content {
+    background: url(/src/assets/img/hero_02.jpg);
+    background-size: 37.5rem auto;
+    background-repeat: no-repeat;
+    background-position: 75% 0%;
+    margin-top: 70px;
+    position: relative;
+}
+
+header .header-content .content-top button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--purple-red);
+    width: 0%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s linear;
+}
+
+header .header-content .content-top button:hover::after {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+header .cart-content h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    width: 2.5rem;
+    border-top: 2px solid var(--white);
+}
+
+header .cart-item-hovered {
+    transition: all .3s ease-in-out;
+
+}
+
+header .cart-item-hovered i {
+    transition: all .3s ease-in-out;
+}
+
+header .cart-item-hovered:hover {
+    background-color: var(--purple-red);
+
+    i {
+        color: var(--white);
+    }
+}
+
+.header-content {
+    z-index: 3;
+}
+
+header .header-content #last-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 90%;
+    width: 105%;
+    left: 0;
+    background-color: #ce1c46;
+    height: 60px;
+    z-index: -1;
+
+}
+
+header .header-content #second-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 90%;
+    width: 2px;
+    left: 50%;
+    background-color: #ce1c46;
+    height: 60px;
+    z-index: 1;
+}
+
+/*note: Header-Layout-Begin */
+
+/*note:Services-Section-Begin */
+main .service-section .section-heading h2::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    border-top: 2px solid var(--purple-red);
+    width: 40px;
+}
+
+main .service-section .service-card {
+    transition: all .3s ease-in-out;
+}
+
+main .service-section .service-card #arrow {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+main .service-section .service-card:hover {
+    padding-top: 40px;
+    background-color: var(--purple-red);
+    color: var(--white);
+
+    #arrow {
+        color: var(--white);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    i {
+        color: var(--white);
+    }
+}
+
+
+.service-section #cart-5::after {
+    content: "";
+    position: absolute;
+    bottom: -45%;
+    height: 60px;
+    width: 2px;
+    left: 50%;
+    background-color: var(--purple-red);
+}
+
+/*note:Services-Section-End */
+
+/* note:Works-Section-Begin */
+
+.works-section-content h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 50px;
+    height: 2px;
+    background-color: var(--purple-red);
+}
+
+.works-section-content a {
+    transition: all .3s ease-in-out;
+}
+
+.works-section-content a:hover {
+    color: var(--purple-red);
+}
+
+.works-section-content #first-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--purple-red);
+}
+
+.work-section-card-part {
+    row-gap: 10px;
+    column-gap: 30px;
+}
+
+.work-section-card-part .row-1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    height: 242px;
+}
+
+.work-section-card-part .row-2 {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 242px;
+}
+
+.work-section-card-part .row-3 {
+    grid-column: 3;
+    grid-row: 1/5;
+    height: 541px;
+
+}
+
+.work-section-card-part .row-4 {
+    grid-column: 1/2;
+    grid-row: 3/5;
+    height: 242px;
+}
+
+.work-section-card-part .row-5 {
+    grid-column: 2/3;
+    grid-row: 3/5;
+    height: 242px;
+}
+
+.work-section-card-part .row-6 {
+    grid-column: 1/2;
+    grid-row: 5/7;
+    height: 541px;
+}
+
+.work-section-card-part .row-7 {
+    grid-column: 3;
+    grid-row: 5/7;
+    height: 242px;
+    margin-top: 20px;
+}
+
+.work-section-card-part .content {
+    filter: grayscale(100%);
+    transition: all .3s ease-in-out;
+    background-color: #000;
+
+
+}
+
+.work-section-card-part .info {
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    z-index: 111111;
+}
+
+.work-section-card-part .content img {
+    transition: all .3s ease-in-out;
+
+}
+
+.work-section-card-part .content:not(.column-1):hover {
+    filter: grayscale(0);
+    opacity: 0.5;
+
+
+
+    img {
+        transform: scale(1.1);
+    }
+
+    .info {
+
+        left: 25%;
+        opacity: 1;
+        z-index: 1000;
+
+    }
+}
+
+
+.about-cart-container h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 50px;
+    height: 2px;
+    background-color: var(--purple-red);
+}
+
+#demo-worker-section::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -150px;
+    width: 2px;
+    height: 50px;
+    background-color: var(--purple-red);
+}
+
+.about-cart-container .top img {
+    filter: grayscale(100%);
+    transition: all .3s ease-in-out;
+}
+
+.about-cart-container .top img:hover {
+    filter: grayscale(0);
+}
+
+/* note:Works-Section-End */
+.note-container h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 50px;
+    height: 2px;
+    background-color: var(--purple-red);
+}
+
+.note-container .right-top p::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--slate-50);
+}
+
+.note-container .right-bottom h6::after {
+    content: "";
+    position: absolute;
+    left: 15%;
+    bottom: -150px;
+    width: 2px;
+    height: 50px;
+    background-color: var(--purple-red);
+}
+
+.news-carts-container .navigater::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35%;
+    height: 1px;
+    background-color: var(--slate-50);
+    transition: all .3s ease-in-out;
+}
+.news-carts-container .navigater:hover::after{
+    background-color: var(--purple-red);
+}
+  .div button::after {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       background-color: var(--purple-red);
+       width: 0%;
+       height: 100%;
+       opacity: 0;
+       visibility: hidden;
+       transition: .3s linear;
+   }
+
+  .div button:hover::after {
+       width: 100%;
+       opacity: 1;
+       visibility: visible;
+    }
+.last{
+    transition: all .3s ease-in-out;
+}
+.last:hover p{
+    color: var(--purple-red);
+}
